@@ -329,15 +329,15 @@ export default function Page() {
 
             <div className="min-w-[300px] rounded-[28px] bg-slate-950 p-7 text-white shadow-xl">
               <div className="text-sm text-slate-400">Company Website</div>
-              <div className="mt-2 text-2xl font-bold">www.jm-tec.com</div>
+              <div className="mt-2 text-2xl font-bold">https://jmtec-homepage.vercel.app</div>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center gap-3">
                   <Mail className="h-4 w-4" />
-                  sales@jm-tec.com
+                 ERP: https://jmtekerp.duckdns.org
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-4 w-4" />
-                  000-0000-0000
+                  문의 연락처 준비 중
                 </div>
               </div>
               <a
