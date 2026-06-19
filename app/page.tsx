@@ -71,6 +71,14 @@ export default function Page() {
             <a href="#products" className="transition hover:text-slate-950">제품군</a>
             <a href="#process" className="transition hover:text-slate-950">운영방식</a>
             <a href="#contact" className="transition hover:text-slate-950">문의</a>
+         <a
+  href="https://jmtekerp.duckdns.org"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-xl bg-slate-900 px-4 py-2 text-white transition hover:bg-blue-600"
+>
+  ERP 접속
+</a>
           </nav>
         </div>
       </header>
@@ -107,6 +115,14 @@ export default function Page() {
                 className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 제품군 보기
+                <a
+  href="https://jmtekerp.duckdns.org"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-2xl bg-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-950/40 transition hover:-translate-y-0.5 hover:bg-emerald-400"
+>
+  ERP 접속
+</a>
               </a>
             </div>
           </div>
