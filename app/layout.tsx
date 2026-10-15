@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  verification: { google: "HGzvAwZrtShsKPubV8YGK3zMEcXAt_cRsulYXU2bSws" },
+  verification: { google: "HGzvAwZrtShsKPubV8YGK3zMEcXAt_cRsulYXU2bSws", other: { "naver-site-verification": "eead2fb82d8fce100173041d7215698861d3395b" } },
   metadataBase: new URL("https://jmtec-homepage.vercel.app"),
   title: "제이엠텍 JM-TEC · JMTEC | 컴프레서 부품 정밀가공",
   description: "제이엠텍(JM-TEC, JMTEC)의 왕복동·스크롤 컴프레서 부품과 CNC 선삭, MCT, 연삭·연마 및 측정 설비를 소개합니다. 회사소개서 다운로드와 도면 기반 견적 문의: kjo7320@hanmail.net.",
@@ -35,4 +35,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
