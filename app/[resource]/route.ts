@@ -1,8 +1,9 @@
+import { companyInterior } from "../company-interior-data";
 import { finalImages1 } from "../final-images-1";
 import { finalImages2 } from "../final-images-2";
 import { finalImages3 } from "../final-images-3";
 import { finalImages4 } from "../final-images-4";
-const imageAssets: Record<string,string> = {...finalImages1,...finalImages2,...finalImages3,...finalImages4};
+const imageAssets: Record<string,string> = {...companyInterior,...finalImages1,...finalImages2,...finalImages3,...finalImages4};
 import { videoBase64 } from "../video-data";
 import { profilePart1 } from "../final-profile-1";
 import { profilePart2 } from "../final-profile-2";
