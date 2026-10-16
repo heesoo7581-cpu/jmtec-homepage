@@ -1,3 +1,8 @@
+import { finalImages1 } from "../final-images-1";
+import { finalImages2 } from "../final-images-2";
+import { finalImages3 } from "../final-images-3";
+import { finalImages4 } from "../final-images-4";
+const imageAssets: Record<string,string> = {...finalImages1,...finalImages2,...finalImages3,...finalImages4};
 import { videoBase64 } from "../video-data";
 import { profilePart1 } from "../final-profile-1";
 import { profilePart2 } from "../final-profile-2";
@@ -7,6 +12,7 @@ import { profilePart5 } from "../final-profile-5";
 const pdfBase64 = profilePart1 + profilePart2 + profilePart3 + profilePart4 + profilePart5;
 export async function GET(_request: Request, context: { params: Promise<{ resource: string }> }) {
  const { resource } = await context.params;
+ if (imageAssets[resource]) return new Response(Buffer.from(imageAssets[resource], "base64"), {headers:{"Content-Type":"image/jpeg", "Cache-Control":"public, max-age=86400"}});
  if (resource === 'company-film.mp4') {
    const bytes = Buffer.from(videoBase64, 'base64');
    const range = _request.headers.get('range');
