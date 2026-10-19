@@ -1,3 +1,4 @@
+import { countVisit } from "../visitor-counter";
 import { companyInterior } from "../company-interior-data";
 import { finalImages1 } from "../final-images-1";
 import { finalImages2 } from "../final-images-2";
@@ -34,4 +35,10 @@ export async function GET(_request: Request, context: { params: Promise<{ resour
  if (resource === 'sitemap.xml') return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://jmtec-homepage.vercel.app/</loc></url></urlset>', {headers:{'Content-Type':'application/xml; charset=utf-8','Cache-Control':'public, max-age=3600'}});
  if (resource === 'company-profile.pdf') return new Response(Buffer.from(pdfBase64, 'base64'), {headers:{'Content-Type':'application/pdf','Content-Disposition':'attachment; filename="JMTEC_Final_Company_Profile.pdf"','Cache-Control':'public, max-age=3600'}});
  return new Response('Not found',{status:404});
+}
+
+export async function POST(request: Request, context: { params: Promise<{ resource: string }> }) {
+ const { resource } = await context.params;
+ if(resource !== "visitors") return new Response("Not found", {status:404});
+ return countVisit(request);
 }
